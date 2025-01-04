@@ -1,0 +1,8 @@
+theme = CyberpunkScarletProtocol
+# theme = Hipster Green
+# theme = Blue Matrix
+# theme = Scarlet Protocol
+font-family = Hurmit Nerd Font Mono
+font-size = 16
+background-opacity = 0.95
+gtk-titlebar = false

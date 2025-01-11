@@ -28,3 +28,5 @@ keymap.set('n', '<c-h>', ':wincmd h<CR>')
 keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 keymap.set("n", "<leader>qqq", ":q<CR>", { desc = "Quit" })
+
+keymap.set("n", "<leader>no", function () require"notion".openMenu() end, { desc = "Open Notion" })

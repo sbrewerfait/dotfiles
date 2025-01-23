@@ -1,0 +1,5 @@
+#!/bin/bash
+
+command="luit -encoding CP437 ssh sbrewer@fpdev"
+
+$($command)

@@ -1,2 +1,2 @@
-require("sbrewer.core")
-require("sbrewer.lazy")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

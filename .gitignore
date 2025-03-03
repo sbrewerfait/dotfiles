@@ -1,0 +1,13 @@
+.isolated-storage/
+containers/
+# filezilla/
+gh/
+raycast/
+fpsessions/
+# github-copilot/
+# raycast/
+ghostty/
+zed/
+iterm2/
+tmux/.config/tmux/plugins/
+zsh/

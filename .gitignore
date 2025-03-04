@@ -6,7 +6,7 @@ raycast/
 fpsessions/
 # github-copilot/
 # raycast/
-ghostty/
+# ghostty/
 zed/
 iterm2/
 tmux/.config/tmux/plugins/

@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 background = #0D1116
 foreground = #ebfafa
 
@@ -29,6 +30,8 @@ palette = 14=#04d1f9
 palette = 7=#ebfafa
 palette = 15=#ebfafa
 =======
+=======
+>>>>>>> Stashed changes
 background = #000000
 foreground = #9f9f9f
 
@@ -58,4 +61,7 @@ palette = 14=#007373
 # white
 palette = 7=#9f9f9f
 palette = 15=#9f9f9f
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

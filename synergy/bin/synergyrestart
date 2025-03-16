@@ -1,0 +1,5 @@
+!#/usr/bin/env bash
+
+sudo /Applications/Synergy.app/Contents/MacOS/synergy-service -u
+
+sudo /Applications/Synergy.app/Contents/MacOS/synergy-service -i

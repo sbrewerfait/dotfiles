@@ -1,4 +1,4 @@
 return {
-  "tris203/precognition.nvim",
-  opts = {},
+  -- "tris203/precognition.nvim",
+  -- opts = {},
 }

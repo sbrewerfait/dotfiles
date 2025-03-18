@@ -1,5 +1,7 @@
 vim.cmd("let g:newrw_liststyle = 3")
 
+vim.notify = require('mini.notify').make_notify()
+
 local opt = vim.opt
 
 opt.relativenumber = true
@@ -22,7 +24,7 @@ opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 opt.scrolloff = 8
-opt.colorcolumn = "150"
+-- opt.colorcolumn = "150"
 
 opt.updatetime = 50
 

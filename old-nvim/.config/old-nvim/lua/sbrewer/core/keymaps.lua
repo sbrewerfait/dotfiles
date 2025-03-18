@@ -21,12 +21,15 @@ keymap.set("n", "N", "Nzzzv")
 
 keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
+keymap.set("n", "<leader>rt", ":retab<CR>i<ESC>", { desc = "Retab" })
+
 -- Navigate vim panes better
 keymap.set('n', '<c-k>', ':wincmd k<CR>')
 keymap.set('n', '<c-j>', ':wincmd j<CR>')
 keymap.set('n', '<c-h>', ':wincmd h<CR>')
 keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
-keymap.set("n", "<leader>qqq", ":q<CR>", { desc = "Quit" })
+keymap.set("n", "<leader>qa", ":q<CR>", { desc = "Quit" })
 
-keymap.set("n", "<leader>no", function () require"notion".openMenu() end, { desc = "Open Notion" })
+keymap.set("n", "H", "<cmd>BufferLineCyclePrev<cr>", { desc = "Move to left tab" })
+keymap.set("n", "L", "<cmd>BufferLineCycleNext<cr>", { desc = "Move to right tab" })

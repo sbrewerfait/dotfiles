@@ -13,6 +13,11 @@ return {
     lazy = false,
     priority = 1000,
   },
+  {
+    "RRethy/base16-nvim",
+    lazy = false,
+    priority = 1000,
+  },
   -- {
   --   "notken12/bash46-colors",
   --   lazy = false,
@@ -22,7 +27,9 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "base16-darkviolet",
-      colorscheme = "noctishc",
+      -- colorscheme = "base16-eris",
+      -- colorscheme = "base16-hardcore",
+      colorscheme = "base16-isotope",
     },
   },
 }

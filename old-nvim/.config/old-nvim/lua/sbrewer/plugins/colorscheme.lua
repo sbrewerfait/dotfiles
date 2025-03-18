@@ -1,5 +1,6 @@
 return {
-    "tinted-theming/tinted-vim",
+    "RRethy/base16-nvim",
+    -- "tinted-theming/tinted-vim",
     -- "Tsuzat/NeoSolarized.nvim",
     -- "liminalminds/icecream.nvim",
 	-- "nonetallt/vim-neon-dark",
@@ -10,7 +11,7 @@ return {
 	config = function()
         vim.g.tinted_colorspace = 256
         -- vim.cmd("colorscheme base16-pinky")
-        vim.cmd("colorscheme base16-darkviolet")
+        vim.cmd("colorscheme base16-isotope")
         -- vim.cmd("colorscheme neosolarized")
         -- vim.cmd("colorscheme icecream")
         -- vim.cmd("colorscheme mgz")

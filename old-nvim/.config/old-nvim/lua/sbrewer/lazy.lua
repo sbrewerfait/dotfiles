@@ -39,6 +39,7 @@ vim.opt.rtp:prepend(lazypath)
 -- })
 
 require("lazy").setup({
+    -- { "echasnovski/mini.nvim", version = false },
   spec = {
     -- import your plugins
     { import = "sbrewer.plugins" },

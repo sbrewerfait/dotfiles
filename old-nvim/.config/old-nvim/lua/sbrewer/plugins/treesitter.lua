@@ -5,11 +5,9 @@ local M = {
         local config = require("nvim-treesitter.configs")
         config.setup {
             ensure_installed = {
-                "markdown",
-                "markdown_inline",
                 "lua",
             },
-            auto_install = true,
+            auto_install = false,
             highlight = { enable = true },
             indent = { enable = true },
         }

@@ -207,6 +207,8 @@ alt-shift-semicolon = 'mode service'
 7 = 1
 8 = [2, 1]
 9 = [3, 2, 1]
+C = [3, 1]
+T = [2, 1]
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -242,21 +244,30 @@ if.app-id = 'app.zen-browser.zen'
 run = ['move-node-to-workspace B']
 
 [[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = ['move-node-to-workspace C']
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Excel'
+run = ['move-node-to-workspace E']
+
+[[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
 run = ['move-node-to-workspace T']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.MobileSMS'
-run = ['move-node-to-workspace C']
-
-[[on-window-detected]]
-if.app-id = 'com.microsoft.teams2'
-run = ['move-node-to-workspace C']
+run = ['move-node-to-workspace M']
 
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
 run = ['move-node-to-workspace O']
 
 [[on-window-detected]]
-if.app-id = 'com.googlecode.iterm2'
-run = ['move-node-to-workspace I']
+if.app-id = 'com.spotify.client'
+run = ['move-node-to-workspace S']
+
+[[on-window-detected]]
+if.app-id="com.mitchellh.ghostty"
+run= ['layout floating']
+

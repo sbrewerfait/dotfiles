@@ -20,11 +20,6 @@ return {
                     },
                 },
             },
-            -- highlights = {
-            --     tab_separator_selected = {
-            --         fg = '#ff0000',
-            --     }
-            -- }
         })
     end,
 }

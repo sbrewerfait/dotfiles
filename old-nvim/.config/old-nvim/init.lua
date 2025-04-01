@@ -14,4 +14,5 @@ end
 
 require("sbrewer.core")
 require("sbrewer.lazy")
+require("sbrewer.core.highlights")
 -- require("oil").setup()

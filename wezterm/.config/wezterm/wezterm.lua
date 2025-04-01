@@ -6,25 +6,21 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-local target = wezterm.target_triple
+-- config.color_scheme = "NvimLight"
 
-if target:find("x86_64") then
-	config.color_scheme = "Chalk (dark) (terminal.sexy)"
-else
-	-- config.color_scheme = "Chalk (dark) (terminal.sexy)"
-	config.color_scheme = "Nocturnal Winter"
-	-- config.color_scheme = "Cyberpunk Scarlet Protocol"
-end
-
-config.font = wezterm.font("JetBrains Mono")
+config.font = wezterm.font("Hurmit Nerd Font Mono")
+config.font_size = 17.6
 
 config.hide_tab_bar_if_only_one_tab = true
 
 config.colors = {
-	cursor_bg = "#8cfd35",
 	cursor_border = "#8cfd35",
+	cursor_bg = "#8cfd35",
 }
 
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.8
+config.macos_window_background_blur = 20
+
+config.window_decorations = "RESIZE"
 
 return config

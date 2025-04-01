@@ -2,6 +2,10 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
+keymap.set("n", "<leader>rk", ":so ~/.config/old-nvim/lua/sbrewer/core/keymaps.lua<cr>", { desc = "Reload keymaps" })
+keymap.set("n", "<leader>ro", ":so ~/.config/old-nvim/lua/sbrewer/core/options.lua<cr>", { desc = "Reload options" })
+keymap.set("n", "<leader>rh", ":so ~/.config/old-nvim/lua/sbrewer/core/highlights.lua<cr>", { desc = "Reload highlights" })
+
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
@@ -33,3 +37,42 @@ keymap.set("n", "<leader>qa", ":q<CR>", { desc = "Quit" })
 
 keymap.set("n", "H", "<cmd>BufferLineCyclePrev<cr>", { desc = "Move to left tab" })
 keymap.set("n", "L", "<cmd>BufferLineCycleNext<cr>", { desc = "Move to right tab" })
+
+keymap.set("n", "<leader><space>", "<cmd>FzfLua files<cr>", { desc = "Find Files" })
+
+keymap.set({ "n", "i" }, "<leader>at", function()
+  -- Get the current line/row/column
+  local cursor_pos = vim.api.nvim_win_get_cursor(0)
+  local row, _ = cursor_pos[1], cursor_pos[2]
+  local line = vim.api.nvim_get_current_line()
+  -- 1) If line is empty => replace it with "- [ ] " and set cursor after the brackets
+  if line:match("^%s*$") then
+    local final_line = "- [ ] "
+    vim.api.nvim_set_current_line(final_line)
+    -- "- [ ] " is 6 characters, so cursor col = 6 places you *after* that space
+    vim.api.nvim_win_set_cursor(0, { row, 6 })
+    return
+  end
+  -- 2) Check if line already has a bullet with possible indentation: e.g. "  - Something"
+  --    We'll capture "  -" (including trailing spaces) as `bullet` plus the rest as `text`.
+  local bullet, text = line:match("^([%s]*[-*]%s+)(.*)$")
+  if bullet then
+    -- Convert bullet => bullet .. "[ ] " .. text
+    local final_line = bullet .. "[ ] " .. text
+    vim.api.nvim_set_current_line(final_line)
+    -- Place the cursor right after "[ ] "
+    -- bullet length + "[ ] " is bullet_len + 4 characters,
+    -- but bullet has trailing spaces, so #bullet includes those.
+    local bullet_len = #bullet
+    -- We want to land after the brackets (four characters: `[ ] `),
+    -- so col = bullet_len + 4 (0-based).
+    vim.api.nvim_win_set_cursor(0, { row, bullet_len + 4 })
+    return
+  end
+  -- 3) If there's text, but no bullet => prepend "- [ ] "
+  --    and place cursor after the brackets
+  local final_line = "- [ ] " .. line
+  vim.api.nvim_set_current_line(final_line)
+  -- "- [ ] " is 6 characters
+  vim.api.nvim_win_set_cursor(0, { row, 6 })
+end, { desc = "Convert bullet to a task or insert new task bullet" })

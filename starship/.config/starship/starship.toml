@@ -4,7 +4,6 @@ add_newline = true
 palette = "default"
 
 format = """
-$line_break\
 [╭](fg:separator)\
 $status\
 $username$env_var\

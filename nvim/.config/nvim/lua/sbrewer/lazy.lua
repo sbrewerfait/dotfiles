@@ -27,23 +27,11 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
---
--- require("lazy").setup({ { import = "sbrewer.plugins" }, { import = "sbrewer.plugins.lsp" } }, {
--- 	checker = {
--- 		enabled = true,
--- 		notify = false,
--- 	},
--- 	change_detection = {
--- 		notify = false,
--- 	},
--- })
-
 require("lazy").setup({
     -- { "echasnovski/mini.nvim", version = false },
   spec = {
     -- import your plugins
     { import = "sbrewer.plugins" },
-    { import = "sbrewer.plugins.lsp" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

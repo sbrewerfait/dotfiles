@@ -4,13 +4,14 @@
 # theme = Blue Matrix
 # theme = Scarlet Protocol
 # theme = NvimLight
-theme = active_theme
-# background = #000000
-# foreground = #FFFFFF
+# theme = active_theme
+theme = BlulocoDark
+background = #000000
+foreground = #ff3336
 font-family = Hurmit Nerd Font Mono
-font-size = 16
-background-opacity = 0.87
-# background-blur = 20
+font-size = 16.6
+background-opacity = 0.7
+background-blur = 20
 gtk-titlebar = false
 custom-shader = shaders/bloom025.glsl
 

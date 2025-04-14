@@ -19,22 +19,55 @@ local Color15 = '#30171a'
 local Color12 = '#5f5f65'
 local Color19 = '#50505a'
 local Color11 = '#141417'
-local Color7 = '#42DD76'
+local Color7 = '#33DD2D'
 local Color17 = '#373741'
 local Color14 = '#1a3125'
 local Color1 = '#4e4e58'
 local Color5 = '#56565a'
 local Color16 = '#414143'
-local Color9 = '#FF478D'
+local Color10 = '#FF478D'
 local Color18 = '#0f0f11'
-local Color10 = '#FF7135'
+local Color9 = '#FF7135'
 local Color2 = '#D62C2C'
 local Color20 = '#AAAAAA'
 local Color6 = '#14E5D4'
-local Color8 = '#A95EFF'
+local Color8 = '#6060FF'
 local Color13 = '#c5c5cb'
-local Color3 = '#28A9FF'
+local Color3 = '#007eff'
+local heading_1 = "#7F00FF"
+local heading_2 = "#007eff"
+local heading_3 = "#33DD2D"
+local heading_4 = "#fdda0d"
+local heading_5 = "#ff7800"
+local heading_6 = "#d22b2b"
+local heading_fg = "#000000"
 
+highlight('RenderMarkdownH1', nil, heading_fg, nil)
+highlight('RenderMarkdownH2', nil, heading_fg, nil)
+highlight('RenderMarkdownH3', nil, heading_fg, nil)
+highlight('RenderMarkdownH4', nil, heading_fg, nil)
+highlight('RenderMarkdownH5', nil, heading_fg, nil)
+highlight('RenderMarkdownH6', nil, heading_fg, nil)
+highlight('RenderMarkdownH1Bg', heading_1, heading_fg, nil)
+highlight('RenderMarkdownH2Bg', heading_2, heading_fg, nil)
+highlight('RenderMarkdownH3Bg', heading_3, heading_fg, nil)
+highlight('RenderMarkdownH4Bg', heading_4, heading_fg, nil)
+highlight('RenderMarkdownH5Bg', heading_5, heading_fg, nil)
+highlight('RenderMarkdownH6Bg', heading_6, heading_fg, nil)
+-- highlight('RenderMarkdownChecked', nil, nil, 'italic')
+-- highlight('RenderMarkdownUnchecked', heading_6, heading_fg, 'bold')
+highlight('markdownH1', nil, heading_1, 'bold')
+highlight('markdownH2', nil, heading_2, 'bold')
+highlight('markdownH3', nil, heading_3, 'bold')
+highlight('markdownH4', nil, heading_4, 'bold')
+highlight('markdownH5', nil, heading_5, 'bold')
+highlight('markdownH6', nil, heading_6, 'bold')
+highlight('markdownH1Delimiter', nil, heading_1, 'bold')
+highlight('markdownH2Delimiter', nil, heading_2, 'bold')
+highlight('markdownH3Delimiter', nil, heading_3, 'bold')
+highlight('markdownH4Delimiter', nil, heading_4, 'bold')
+highlight('markdownH5Delimiter', nil, heading_5, 'bold')
+highlight('markdownH6Delimiter', nil, heading_6, 'bold')
 highlight('Type', nil, Color0, nil)
 highlight('Comment', nil, Color1, 'italic')
 highlight('Constant', nil, Color2, nil)
@@ -47,7 +80,7 @@ highlight('Type', nil, Color6, nil)
 highlight('String', nil, Color7, nil)
 highlight('Type', nil, Color8, nil)
 highlight('Identifier', nil, Color9, nil)
-highlight('Number', nil, Color10, nil)
+highlight('Number', nil, Color2, nil)
 highlight('StatusLine', Color12, Color11, nil)
 highlight('WildMenu', Color11, Color13, nil)
 highlight('Pmenu', Color11, Color13, nil)
@@ -55,8 +88,9 @@ highlight('PmenuSel', Color13, Color11, nil)
 highlight('PmenuThumb', Color11, Color13, nil)
 highlight('DiffAdd', Color14, nil, nil)
 highlight('DiffDelete', Color15, nil, nil)
-highlight('Normal', Color11, Color13, nil)
+highlight('Normal', 'NONE', nil, nil)
 highlight('Visual', Color16, nil, nil)
+highlight('VisualNOS', Color16, nil, nil)
 highlight('CursorLine', Color16, nil, nil)
 highlight('ColorColumn', Color16, nil, nil)
 highlight('SignColumn', Color11, nil, nil)
@@ -65,6 +99,12 @@ highlight('TabLine', Color18, Color19, nil)
 highlight('TabLineSel', Color20, Color11, nil)
 highlight('TabLineFill', Color18, Color19, nil)
 highlight('TSPunctDelimiter', nil, Color13, nil)
+highlight('BufferCurrent', 'NONE', Color4, nil)
+highlight('BufferCurrentMod', 'NONE', Color4, nil)
+highlight('BufferTabpageFill', 'NONE', nil, nil)
+highlight('BufferTabpage', 'NONE', Color13, nil)
+-- highlight('Delimiter', 'NONE', Color8, nil)
+highlight('Statement', 'NONE', Color4, nil)
 
 link('TSLabel', 'Type')
 link('Folded', 'Comment')

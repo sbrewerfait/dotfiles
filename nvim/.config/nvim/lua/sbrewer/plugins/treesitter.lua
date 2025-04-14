@@ -6,9 +6,12 @@ local M = {
         config.setup {
             ensure_installed = {
                 "lua",
+                "markdown",
+                "markdown_inline",
+                "bash",
             },
-            auto_install = false,
-            highlight = { enable = true },
+            auto_install = true,
+            highlight = { enable = false },
             indent = { enable = true },
         }
     end,

@@ -59,6 +59,7 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = "markdown",
     callback = function()
         vim.api.nvim_buf_set_keymap(0, 'n', 'dd', 'dd:write<CR>', { noremap = true, silent = true })
+        vim.api.nvim_buf_set_keymap(0, 'n', '<leader>x', ':ToggleCheckbox<cr>:write<cr>', { noremap = true, silent = true })
     end,
 })
 

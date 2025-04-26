@@ -41,7 +41,7 @@ keymap.set("n", "L", "<cmd>BufferNext<cr>", { desc = "Move to right tab" })
 keymap.set("n", "<leader>bc", "<cmd>BufferClose<cr>", { desc = "Move to right tab" })
 
 -- Fuzzy Find
-keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>", { desc = "Find Files" })
+-- keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>", { desc = "Find Files" })
 
 -- File Explorer
 keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle Explorer" })

@@ -15,7 +15,6 @@ return {
 ██╔══██╗██╔══██╗██╔══╝  ██║███╗██║╚██╗ ██╔╝██║██║╚██╔╝██║
 ██████╔╝██║  ██║███████╗╚███╔███╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 ╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚══╝╚══╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
-                                                         
 ]],
             },
             sections = {
@@ -28,7 +27,7 @@ return {
             },
         },
         explorer = {
-            enabled = true,
+            enabled = false,
             layout = {
                 cycle = false,
             },
@@ -59,6 +58,8 @@ return {
                 Snacks.notifier.show_history()
               end
             end, desc = "Notification History" },
-        { "<leader>ee", function() Snacks.explorer() end, desc = "Toggle Explorer" },
+        -- { "<leader>ee", function() Snacks.explorer() end, desc = "Toggle Explorer" },
+        { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Config Files" },
+        { "<leader>ff", function() Snacks.picker.smart() end, desc = "Find Files" },
     },
 }

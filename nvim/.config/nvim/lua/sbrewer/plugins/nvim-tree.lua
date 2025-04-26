@@ -1,7 +1,7 @@
 return {
     "nvim-tree/nvim-tree.lua",
     dependencies = "nvim-tree/nvim-web-devicons",
-    enabled = false,
+    enabled = true,
     config = function()
         local nvimtree = require("nvim-tree")
 
@@ -10,6 +10,21 @@ return {
         vim.g.loaded_netrwPlugin = 1
 
         nvimtree.setup({
+            on_attach = function(bufnr)
+                local api = require('nvim-tree.api')
+
+                local function opts(desc)
+                    return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+                end
+
+                api.config.mappings.default_on_attach(bufnr)
+
+                vim.keymap.set('n', 'A', function()
+                    local node = api.tree.get_node_under_cursor()
+                    local path = node.type == "directory" and node.absolute_path or vim.fs.dirname(node.absolute_path)
+                    require("easy-dotnet").create_new_item(path)
+                end, opts('Create file from dotnet template'))
+            end,
             view = {
                 width = 35,
                 relativenumber = false,
@@ -41,14 +56,15 @@ return {
                     window_picker = {
                         enable = false,
                     },
+                    quit_on_open = true,
                 },
             },
             filters = {
-                custom = { ".DS_Store" },
+                custom = { ".DS_Store", "^\\._" },
             },
             git = {
                 ignore = false,
             },
         })
-    end
+    end,
 }

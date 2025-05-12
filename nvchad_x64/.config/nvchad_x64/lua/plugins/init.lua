@@ -31,6 +31,13 @@ return {
         },
     },
     {
+        "nvim-tree/nvim-tree.lua",
+        cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+        opts = function()
+            return require "configs.nvim-tree"
+        end
+    },
+    {
         "GustavEikaas/easy-dotnet.nvim",
         dependencies = {
             "nvim-lua/plenary.nvim",

@@ -1,0 +1,67 @@
+#!/bin/sh
+set -eu
+
+# require your Twitch app credentials
+[ -n "${TWITCH_CLIENT_ID-}" ] && [ -n "${TWITCH_CLIENT_SECRET-}" ] || exit 1
+# TODO Echo out an error message
+
+# fetch an App Access Token
+token=$(curl -s -X POST \
+  "https://id.twitch.tv/oauth2/token?client_id=$TWITCH_CLIENT_ID&client_secret=$TWITCH_CLIENT_SECRET&grant_type=client_credentials" |
+  jq -r .access_token)
+[ -n "$token" ] || exit 1
+
+# locate your channel list
+confdir="${XDG_CONFIG_HOME:-$HOME/.config}/twitch-live"
+file="${1:-$confdir/channels.conf}"
+[ -f "$file" ] || exit 1
+
+# build the Twitch API call
+curl_params=""
+while IFS= read -r c; do
+  case "$c" in '' | \#*) continue ;; esac
+  curl_params="$curl_params --data-urlencode user_login=$c"
+done <"$file"
+[ -n "$curl_params" ] || exit 1
+
+# ask Twitch who's live
+resp=$(curl -s -G https://api.twitch.tv/helix/streams \
+  -H "Client-ID: $TWITCH_CLIENT_ID" \
+  -H "Authorization: Bearer $token" \
+  $curl_params)
+err=$(printf '%s' "$resp" | jq -r '.message? // empty')
+[ -z "$err" ] || exit 1
+
+# pick a channel
+tmp=$(mktemp)
+printf '%s' "$resp" | jq -r '(.data // [])[].user_login' >"$tmp"
+[ "$(wc -l <"$tmp" | tr -d ' ')" -gt 0 ] || {
+  rm "$tmp"
+  exit 0
+}
+i=1
+while IFS= read -r lg; do
+  printf '%2d) %s\n' "$i" "$lg"
+  i=$((i + 1))
+done <"$tmp"
+printf 'Choose a channel number: '
+read idx
+sel=$(sed -n "${idx}p" "$tmp")
+rm "$tmp"
+
+# kill any existing mpv and twt instances
+killall mpv 2>/dev/null || :
+killall twt 2>/dev/null || :
+
+# launch mpv for the selected Twitch channel (silenced) and detach it
+nohup mpv --no-terminal "https://twitch.tv/$sel" >/dev/null 2>&1 &
+mpv_pid=$!
+disown "$mpv_pid"
+
+# launch twt in a new terminal (kitty) for the same Twitch channel and detach it
+nohup kitty --class TwitchTUI -e twt -c "$sel" >/dev/null 2>&1 &
+twt_pid=$!
+disown "$twt_pid"
+
+# Free the terminal immediately - no waiting on any process
+exit 0

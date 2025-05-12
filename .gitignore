@@ -11,3 +11,5 @@ zed/
 iterm2/
 tmux/.config/tmux/plugins/
 zsh/
+
+**/.DS_Store

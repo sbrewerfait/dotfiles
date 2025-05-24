@@ -1,10 +1,10 @@
-
+### START-OF-ICON-MAP
 function icon_map() {
   case "$1" in
   "Live")
     icon_result=":ableton:"
     ;;
-  "Adobe Bridge")
+  "Adobe Bridge"*)
     icon_result=":adobe_bridge:"
     ;;
   "Affinity Designer")
@@ -231,9 +231,6 @@ function icon_map() {
     ;;
   "System Preferences" | "System Settings" | "系统设置" | "Réglages Système")
     icon_result=":gear:"
-    ;;
-  "Ghostty")
-    icon_result=":ghostty:"
     ;;
   "GitHub Desktop")
     icon_result=":git_hub:"
@@ -697,7 +694,7 @@ function icon_map() {
   "Zed")
     icon_result=":zed:"
     ;;
-  "Zen Browser" | "Zen")
+  "Zen Browser")
     icon_result=":zen_browser:"
     ;;
   "Zeplin")
@@ -717,6 +714,7 @@ function icon_map() {
     ;;
   esac
 }
+### END-OF-ICON-MAP
 
 icon_map "$1"
 

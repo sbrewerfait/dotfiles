@@ -1,12 +1,21 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-SKETCHYBAR_CONFIG="$HOME/.config/sketchybar"
+# FONT_FACE="Hurmit Nerd Font"
 
-# MAIN_DISPLAY=$(system_profiler SPDisplaysDataType | grep -B 3 'Main Display:' | awk '/Main Display/ {print $3}')
-MAIN_DISPLAY=$(system_profiler SPDisplaysDataType | grep -B 3 'Display Type:' | awk '/Display Type/ {print $3}')
+export PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
+export ITEM_DIR="$HOME/.config/sketchybar/items"
 
-if [[ $MAIN_DISPLAY = "Built-in" ]]; then
-    source "$SKETCHYBAR_CONFIG/sketchybarrc-laptop"
-else
-    source "$SKETCHYBAR_CONFIG/sketchybarrc-desktop"
-fi
+source "$CONFIG_DIR/colors.sh"
+
+source "$CONFIG_DIR/bar.sh"
+source "$CONFIG_DIR/defaults.sh"
+
+source "$ITEM_DIR/spaces.sh"
+source "$ITEM_DIR/front_app.sh"
+
+source "$ITEM_DIR/calendar.sh"
+source "$ITEM_DIR/battery.sh"
+# source "$ITEM_DIR/separator.sh"
+source "$ITEM_DIR/spotify.sh"
+
+sketchybar --update

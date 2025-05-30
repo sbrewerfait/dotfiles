@@ -43,49 +43,49 @@ for monitor_id in $(echo "$APPS_INFO" | jq -r "map ( .\"monitor-appkit-nsscreen-
 done
 
 if [ -z "$monitor" ]; then
-  monitor="1"
+    monitor="1"
 fi
-
 # When icons is empty, set it to " "
 if [ -z "$icons" ]; then
-  if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
-    sketchybar --animate sin 10 \
-      --set "$NAME" \
-      y_offset=10 y_offset=0 \
-      background.drawing=on
+    if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
+        sketchybar --animate sin 10 \
+            --set "$NAME" \
+            y_offset=10 y_offset=0 \
+            background.drawing=on
 
-    sketchybar --set "$NAME" \
-      display="$monitor" \
-      drawing=on \
-      label="$icons" \
-      label.color="$BACKGROUND" \
-      icon.color="$BACKGROUND" \
-      background.color="$ACCENT_COLOR"
-  else
-    sketchybar --set "$NAME" drawing=off
-  fi
+        sketchybar --set "$NAME" \
+            display="$monitor" \
+            drawing=on \
+            label="$icons" \
+            label.color="$BACKGROUND" \
+            icon.color="$BACKGROUND" \
+            background.color="$ACCENT_COLOR"
+    else
+        sketchybar --set "$NAME" drawing=off
+    fi
 else
-  if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
-    sketchybar --animate sin 10 \
-      --set "$NAME" \
-      y_offset=10 y_offset=0 \
-      background.drawing=on
+    if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
+        sketchybar --animate sin 10 \
+            --set "$NAME" \
+            y_offset=10 y_offset=0 \
+            background.drawing=on
 
-    sketchybar --set "$NAME" \
-      display="$monitor" \
-      drawing=on \
-      label="$icons" \
-      label.color="$BACKGROUND" \
-      icon.color="$BACKGROUND" \
-      background.color="$ACCENT_COLOR"
-  else
-    sketchybar --set "$NAME" \
-      display="$monitor" \
-      drawing=on \
-      label="$icons" \
-      background.drawing=off \
-      label.color="$ACCENT_COLOR" \
-      icon.color="$ACCENT_COLOR" \
-      background.color="$TRANSPARENT"
-  fi
+        sketchybar --set "$NAME" \
+            display="$monitor" \
+            drawing=on \
+            label="$icons" \
+            label.color="$BACKGROUND" \
+            icon.color="$BACKGROUND" \
+            background.color="$ACCENT_COLOR"
+    else
+        sketchybar --set "$NAME" \
+            display="$monitor" \
+            drawing=on \
+            label="$icons" \
+            background.drawing=off \
+            label.color="$ACCENT_COLOR" \
+            icon.color="$ACCENT_COLOR" \
+            background.color="$TRANSPARENT"
+    fi
 fi
+

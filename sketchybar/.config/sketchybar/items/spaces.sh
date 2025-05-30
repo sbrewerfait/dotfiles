@@ -13,10 +13,13 @@ sketchybar --add item aerospace_mode left \
 for sid in $(aerospace list-workspaces --all); do
   monitor=$(aerospace list-windows --workspace "$sid" --format "%{monitor-appkit-nsscreen-screens-id}")
 
-  if [ -z "$monitor" ]; then
-    # continue
-    monitor="0"
-  fi
+    if [ -z "$monitor" ]; then
+      monitor="1"
+    fi
+  # if [ -z "$monitor" ]; then
+  #   # continue
+  #   monitor="0"
+  # fi
 
   sketchybar --add item space."$sid" left \
     --subscribe space."$sid" aerospace_workspace_change display_change system_woke mouse.entered mouse.exited \

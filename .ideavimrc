@@ -1,0 +1,76 @@
+let mapleader = ' '
+
+noremap U <C-r>
+
+inoremap jk <ESC>
+
+inoremap JK <ESC>
+
+" paste over without overwriting default register
+xnoremap p P
+
+" open config
+noremap <leader>co :edit ~/.ideavimrc<cr>
+
+" Source Config File
+noremap <leader>cs :source ~/.ideavimrc<cr>:nohlsearch<cr>
+
+" Settings
+set clipboard^=unnamed,unnamedplus
+
+set hlsearch
+
+set ignorecase
+
+set smartcase
+
+set incsearch
+
+set matchpairs+=<:>
+
+" Editor Navigation
+" Visual mode: move selected lines down/up and reselect
+xnoremap J :m '>+1<CR>gv=gv
+xnoremap K :m '<-2<CR>gv=gv
+
+" Normal mode: keep cursor position when joining lines
+nnoremap J mzJ`z
+
+" Normal mode: half-page down/up, keep cursor centered
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+" Normal mode: next/previous search result centered and opened
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Action Mappings
+
+" Window Splits
+map <leader>wv <Action>(SplitVertically)
+map <leader>wh <Action>(SplitHorizontally)
+map <leader>wu <Action>(Unsplit)
+map <leader>wua <Action>(UnsplitAll)
+
+" Goto Something
+map <leader>sc <Action>(GotoClass)
+map <leader>sf <Action>(GotoFile)
+map <leader>ss <Action>(GotoSymbol)
+map <leader>sa <Action>(GotoAction)
+
+map <leader>gd <Action>(GotoDeclaration)
+
+" Close File
+map <leader>xx <Action>(CloseContent)
+" Plugins
+Plug 'tpope/vim-commentary'
+
+set mini-ai
+
+set which-key
+set notimeout

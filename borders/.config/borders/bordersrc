@@ -3,7 +3,7 @@
 options=(
     active_color=0xff48d321
     inactive_color=0xff9013fe
-    width=5.0
+    width=4.0
 )
 
 borders "${options[@]}"

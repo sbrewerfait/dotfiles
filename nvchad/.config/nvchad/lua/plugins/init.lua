@@ -13,13 +13,20 @@ return {
     {
         "williamboman/mason.nvim",
         opts = {
+            registries = {
+                "github:mason-org/mason-registry",
+                "github:Crashdummyy/mason-registry",
+            },
             ensure_installed = {
                 "lua-language-server",
                 "stylua",
                 "html-lsp",
                 "css-lsp",
                 "prettier",
-                "csharp_ls",
+                "csharpier",
+                "roslyn",
+                "rzls",
+                "netcoredbg",
             },
         },
     },
@@ -127,6 +134,9 @@ return {
                 "markdown_inline",
                 "bash",
                 "c_sharp",
+                "vim",
+                "vimdoc",
+                "razor",
             },
         },
     },

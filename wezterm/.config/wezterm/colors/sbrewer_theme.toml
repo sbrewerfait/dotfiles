@@ -1,0 +1,14 @@
+[colors]
+background = "#131513"
+cursor_bg = "#8cfd35"
+cursor_border = "#8cfd35"
+cursor_fg = "#282c34"
+foreground = "#cccccc"
+selection_bg = "#b9c0ca"
+selection_fg = "#272b33"
+
+ansi = ["#131513","#29a329","#000000","#98981b","#3f1c9e","#e6193c","#000000","#000000"]
+brights = ["#687d68","#1997c6","#29a329","#98981b","#875ef7","#e6193c","#1999b3","#cccccc"]
+
+# ansi = ["#131513","#e6193c","#29a329","#98981b","#0f4ac6","#ad2bee","#1999b3","#f8dcc0"]
+# brights = ["#687d68","#e6193c","#29a329","#98981b","#1997c6","#ad2bee","#1999b3","#f6f5fb"]

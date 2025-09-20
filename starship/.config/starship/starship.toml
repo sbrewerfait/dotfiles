@@ -19,16 +19,16 @@ $character\
 
 [palettes.default]
 prompt_ok = "#8047c1"
-prompt_err = "#e23140"
+prompt_err = "#ff0000"
 icon = "#161514"
 separator = "#35312c"
 background = "#35312c"
 
 directory = "#0CC40F"
-username = "#9f31e2"
-git_info = "#ff7561"
-duration = "#e26f31"
-status = "#e23140"
+username = "#5f00ff"
+git_info = "#ff6a00"
+duration = "#eeff00"
+status = "#ff0000"
 
 ###########################################
 
@@ -37,7 +37,7 @@ format = "[@$env_value ](bg:background)[](fg:background)"
 
 [username]
 show_always = true
-format = "[─](fg:separator)[](fg:username)[🫠](fg:icon bg:username)[](fg:username bg:background)[ $user](bg:background)"
+format = "[─](fg:separator)[](fg:username)[🫠](fg:icon bg:username)[](fg:username bg:background)[ $user](bg:background)[](fg:background)"
 
 
 [character]

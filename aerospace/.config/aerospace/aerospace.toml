@@ -68,7 +68,7 @@ inner.horizontal = 8
 inner.vertical = 8
 outer.left = 8
 outer.bottom = 8
-outer.top = [{ monitor."Built-in" = 7 }, 38]
+outer.top = [{ monitor."Built-in" = 12 }, 38]
 outer.right = 8
 
 # 'main' binding mode declaration
@@ -231,6 +231,10 @@ if.app-id = 'org.dbgate'
 run = ['move-node-to-workspace D']
 
 [[on-window-detected]]
+if.app-id = 'com.jetbrains.datagrip'
+run = ['move-node-to-workspace D']
+
+[[on-window-detected]]
 if.app-id = 'com.microsoft.Excel'
 run = ['move-node-to-workspace E']
 
@@ -245,6 +249,10 @@ run = ['move-node-to-workspace M']
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
 run = ['move-node-to-workspace O']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'parallels'
+run = ['move-node-to-workspace P']
 
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'

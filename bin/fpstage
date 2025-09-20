@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+luit -encoding CP437 ssh sbrewer@fpstage

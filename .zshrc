@@ -6,6 +6,7 @@ alias nv='nvim'
 alias cl='clear'
 alias mux="tmuxinator"
 alias dotnetx64="/usr/local/share/dotnet/x64/dotnet"
+alias spotify="spotify_player"
 
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH="/Users/sbrewer/.config/scripts:$PATH"

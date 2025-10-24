@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 options=(
-    active_color=0xff48d321
-    inactive_color=0xff9013fe
+    active_color=0xff29a329
+    inactive_color=0xff3E1C9E
     width=4.0
 )
 

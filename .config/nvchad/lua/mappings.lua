@@ -55,3 +55,7 @@ end, { desc = "buffer goto prev" })
 map("n", "<S-x>", function()
     require("nvchad.tabufline").close_buffer()
 end, { desc = "buffer close" })
+
+-- NvimTree Keybinds
+local nvimtree_api = require "nvim-tree.api"
+map("n", "<leader>bm", nvimtree_api.marks.bulk.move, { desc = "Move Bookmarked" })

@@ -46,15 +46,23 @@ root: ~/
 
 windows:
   - cli:
+      layout: '1afc,186x50,0,0{64x50,0,0,1,121x50,65,0,4}'
+      panes:
+        - wtf:
+          - wtfutil
+        - spotify:
+          - spotify
   - notes:
       root: '/Users/sbrewer/Library/Mobile Documents/iCloud~md~obsidian/Documents/SBrewer Dev/SBrewer Dev'
       panes:
         - nvim
   - filepro:
-      layout: '3204,271x66,0,0[271x31,0,0{90x31,0,0,3,90x31,91,0,4,89x31,182,0,5},271x34,0,32{90x34,0,32,6,90x34,91,32,8,89x34,182,32,7}]'
+      # layout: '3204,271x66,0,0[271x31,0,0{90x31,0,0,3,90x31,91,0,4,89x31,182,0,5},271x34,0,32{90x34,0,32,6,90x34,91,32,8,89x34,182,32,7}]'
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
+      # layout: tiled
+      layout: '355c,170x53,0,0[170x26,0,0{84x26,0,0,3,85x26,85,0,5},170x26,0,27{84x26,0,27,7,85x26,85,27,8}]'
       panes:
         - fp1:
             -
@@ -63,8 +71,4 @@ windows:
         - fp3:
             -
         - fp4:
-            -
-        - fp5:
-            -
-        - fp6:
             -

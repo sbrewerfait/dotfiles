@@ -1,0 +1,6 @@
+[[keymaps]]
+command = "LibraryPage"
+key_sequence = "g m"
+[[actions]]
+action = "ToggleLiked"
+key_sequence = "g l"

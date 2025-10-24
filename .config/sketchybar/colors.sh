@@ -24,6 +24,7 @@ export RED=0xffd0021b
 
 # -- Transparent Scheme --
 export BAR_COLOR=0x40000000
+export PURPLE_BAR_COLOR=0x803E1C9E
 export ITEM_BG_COLOR=0xff9013fe
 # export ITEM_BG_COLOR=0xff353c3f
 export ACCENT_COLOR=0xff48d321

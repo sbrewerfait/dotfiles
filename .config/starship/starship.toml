@@ -1,6 +1,6 @@
 # starship.toml
 
-add_newline = true
+add_newline = false
 palette = "default"
 
 format = """

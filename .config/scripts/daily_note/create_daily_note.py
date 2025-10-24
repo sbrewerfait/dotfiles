@@ -1,3 +1,5 @@
+#!/Users/sbrewer/.config/scripts/daily_note/.venv/bin/python
+
 import os
 import pandas as pd
 from datetime import datetime

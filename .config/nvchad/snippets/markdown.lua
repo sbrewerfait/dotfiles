@@ -1,6 +1,6 @@
-local ls = require("luasnip")
+local ls = require "luasnip"
 
-local extend_decorator = require("luasnip.util.extend_decorator")
+local extend_decorator = require "luasnip.util.extend_decorator"
 
 local s = extend_decorator.apply(ls.s, {})
 
@@ -17,31 +17,29 @@ table.insert(
         name = "Daily Note Template",
         desc = "Template for daily work log",
     }, {
-        t({
+        t {
             "---",
             "tags:",
             "    - 📅Daily",
             "---",
             "",
-            "# DAILY NOTE - "
-        }),
+            "# DAILY NOTE - ",
+        },
         i(1, "todays date"),
-        t({
+        t {
             "",
             "***",
             "## Work Log",
             "",
-            "### Tasks:",
+            "### Tasks/Tickets:",
             "",
             "### Meetings:",
             "",
             "### Miscellaneous:",
             "",
-            "### Tickets:",
-            "",
             "## Notes",
             "- ",
-        }),
+        },
     })
 )
 

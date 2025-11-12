@@ -1,9 +1,9 @@
 wtf:
   colors:
     border:
-      focusable: darkslateblue
-      focused: orange
-      normal: gray
+      focusable: blueviolet
+      focused: limegreen
+      normal: blueviolet
   grid:
     columns: [32, 32, 32, 32, 90]
     rows: [10, 10, 4, 10, 4, 90]

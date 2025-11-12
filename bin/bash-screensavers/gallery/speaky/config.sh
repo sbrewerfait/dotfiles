@@ -1,0 +1,6 @@
+name="speaky"
+tagline="dramatic talking screensaver"
+description="Why just watch when you can listen? This screensaver uses text-to-speech to deliver a monologue of dramatic, humorous, and sometimes existential phrases. Each line is displayed at a random location, with a random voice, for maximum theatrical effect."
+authors="Jules"
+license="MIT"
+settings=""

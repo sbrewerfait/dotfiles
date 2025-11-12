@@ -1,0 +1,6 @@
+name="bouncing"
+tagline="bouncing 'O' madness"
+description="A tribute to the DVD screensavers of yesteryear. Watch as multiple 'O's bounce around the terminal, changing color and direction as they hit the edges. Will they ever hit the corner? Only time will tell."
+authors="attogram"
+license="MIT"
+settings=""

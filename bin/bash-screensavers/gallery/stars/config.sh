@@ -1,0 +1,6 @@
+name="stars"
+tagline="twinkling starfield"
+description="Gaze into the cosmos with this starfield simulation. The screensaver generates a field of stars that twinkle and shimmer, creating a peaceful and mesmerizing view of the night sky. Perfect for moments of quiet contemplation."
+authors="attogram"
+license="MIT"
+settings=""

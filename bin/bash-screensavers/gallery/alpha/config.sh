@@ -1,0 +1,6 @@
+name="alpha"
+tagline="random colorful pixels"
+description="A minimalist screensaver that slowly fills the screen with a random pattern of colorful pixels. Each character block is placed one at a time, creating a mesmerizing and ever-changing mosaic. It's simple, lightweight, and surprisingly hypnotic."
+authors="attogram"
+license="MIT"
+settings=""

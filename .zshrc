@@ -7,13 +7,7 @@ alias cl='clear'
 alias mux="tmuxinator"
 alias dotnetx64="/usr/local/share/dotnet/x64/dotnet"
 alias spotify="spotify_player"
-
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-export PATH="/Users/sbrewer/.config/scripts:$PATH"
-export WEZTERM_CONFIG_FILE="/Users/sbrewer/.config/wezterm/wezterm.lua"
-export STARSHIP_CONFIG="/Users/sbrewer/.config/starship/starship.toml"
-export EDITOR="nvim"
-export NVIM_APPNAME="nvchad"
+alias ss="~/bin/bash-screensavers/screensaver.sh"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -38,3 +32,6 @@ zle     -N             sesh-sessions
 bindkey -M emacs '\eg' sesh-sessions
 bindkey -M vicmd '\eg' sesh-sessions
 bindkey -M viins '\eg' sesh-sessions
+
+# Created by `pipx` on 2025-11-11 16:40:33
+export PATH="$PATH:/Users/sbrewer/.local/bin"

@@ -5,11 +5,12 @@
 # theme = Scarlet Protocol
 # theme = NvimLight
 # theme = active_theme
-theme = BlulocoDark
+# theme = filePro
+theme = midnight
 background = #000000
-foreground = #ff3336
-font-family = Hurmit Nerd Font Mono
-font-size = 16.6
+# foreground = #ff3336
+font-family = Anonymous Pro
+font-size = 20
 background-opacity = 0.7
 background-blur = 20
 # window-decoration = none
@@ -30,3 +31,6 @@ keybind = f10=esc:[21~
 keybind = f11=esc:[23~
 keybind = f12=esc:[24~
 keybind = home=esc:[1~
+
+keybind = ctrl+s>\=new_split:right
+keybind = ctrl+s>-=new_split:down

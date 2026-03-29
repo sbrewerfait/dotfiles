@@ -68,7 +68,9 @@ inner.horizontal = 3
 inner.vertical = 3
 outer.left = 2
 outer.bottom = 3
-outer.top = [{ monitor."Built-in" = 5 }, 36]
+outer.top = [{ monitor."Built-in" = 2 }, 2]
+# If you use sketchybar
+# outer.top = [{ monitor."Built-in" = 5 }, 36]
 outer.right = 2
 
 # 'main' binding mode declaration
@@ -191,12 +193,12 @@ alt-shift-semicolon = ['mode service', 'exec-and-forget sketchybar --trigger aer
 1 = 1
 2 = [2, 1]
 3 = [3, 2, 1]
-4 = 1
-5 = [2, 1]
-6 = [3, 2, 1]
-7 = 1
-8 = [2, 1]
-9 = [3, 2, 1]
+4 = [4, 3, 2, 1]
+5 = 1
+6 = [2, 1]
+7 = [3, 2, 1]
+8 = [4, 3, 2, 1]
+9 = 1
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes

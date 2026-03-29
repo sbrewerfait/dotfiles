@@ -1,6 +1,0 @@
-name="tunnel"
-tagline="fly into the digital tunnel"
-description="Prepare for hyperspace! This screensaver creates the effect of flying through a digital tunnel, with concentric shapes expanding towards you. It's a fast-paced and visually engaging experience."
-authors="attogram"
-license="MIT"
-settings=""

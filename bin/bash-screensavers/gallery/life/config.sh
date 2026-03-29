@@ -1,7 +1,0 @@
-name="life"
-tagline="cellular automata"
-description="Conways game of life lives in your terminal"
-authors="Liam-Wirth, attogram"
-license="Unknown, MIT"
-settings=""
-note="From https://github.com/Liam-Wirth/Automata.sh"

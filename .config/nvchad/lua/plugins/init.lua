@@ -1,4 +1,16 @@
 return {
+    -- {
+    --     "uhs-robert/oasis.nvim",
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         require("oasis").setup {
+    --             style = "abyss",
+    --             transparent = true,
+    --         } -- (see Configuration below for all customization options)
+    --         -- vim.cmd.colorscheme "oasis-abyss" -- After setup, apply theme (or any style like "oasis-night")
+    --     end,
+    -- },
     {
         "stevearc/conform.nvim",
         event = "BufWritePre", -- uncomment for format on save
@@ -19,14 +31,21 @@ return {
             },
             ensure_installed = {
                 "lua-language-server",
+
+                "xmlformatter",
+                "csharpier",
+                "prettier",
+
                 "stylua",
+                "bicep-lsp",
                 "html-lsp",
                 "css-lsp",
-                "prettier",
-                "csharpier",
+                "eslint-lsp",
+                "typescript-language-server",
+                "json-lsp",
+                "rust-analyzer",
+
                 "roslyn",
-                "rzls",
-                "netcoredbg",
             },
         },
     },
@@ -45,17 +64,6 @@ return {
         end,
     },
     {
-        "GustavEikaas/easy-dotnet.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-telescope/telescope.nvim",
-        },
-        cmd = "Dotnet",
-        config = function()
-            require("easy-dotnet").setup()
-        end,
-    },
-    {
         "echasnovski/mini.nvim",
         lazy = false,
         version = false,
@@ -71,7 +79,6 @@ return {
         opts = {},
         dependencies = {
             "MunifTanjim/nui.nvim",
-            "rcarriga/nvim-notify",
         },
         config = function()
             require "configs.noice"
@@ -133,15 +140,28 @@ return {
                 "markdown",
                 "markdown_inline",
                 "bash",
-                "c_sharp",
                 "vim",
                 "vimdoc",
+                "hyprlang",
+                "html",
+                "css",
+
+                "c_sharp",
                 "razor",
             },
         },
     },
     {
         "ianklapouch/wildberries.nvim",
-        name = "wildberries"
+        name = "wildberries",
+    },
+    {
+        "seblyng/roslyn.nvim",
+        ---@module 'roslyn.config'
+        ---@type RoslynNvimConfig
+        ft = { "cs", "razor" },
+        opts = {
+            -- your configuration comes here; leave empty for default settings
+        },
     },
 }

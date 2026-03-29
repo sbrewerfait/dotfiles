@@ -3,47 +3,6 @@
 name: code
 root: ~/
 
-# Optional tmux socket
-# socket_name: foo
-
-# Note that the pre and post options have been deprecated and will be replaced by
-# project hooks.
-
-# Project hooks
-
-# Runs on project start, always
-# on_project_start: command
-
-# Run on project start, the first time
-# on_project_first_start: command
-
-# Run on project start, after the first time
-# on_project_restart: command
-
-# Run on project exit ( detaching from tmux session )
-# on_project_exit: command
-
-# Run on project stop
-# on_project_stop: command
-
-# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-# pre_window: rbenv shell 2.0.0-p247
-
-# Pass command line options to tmux. Useful for specifying a different tmux.conf.
-# tmux_options: -f ~/.tmux.mac.conf
-
-# Change the command to call tmux. This can be used by derivatives/wrappers like byobu.
-# tmux_command: byobu
-
-# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
-# startup_window: editor
-
-# Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
-# startup_pane: 1
-
-# Controls whether the tmux session should be attached to automatically. Defaults to true.
-# attach: false
-
 windows:
   - config:
       layout: even-horizontal
@@ -54,8 +13,7 @@ windows:
             - cd /Users/sbrewer/.config
             - nvim
   - bash:
-      layout: 'ab72,191x52,0,0{110x52,0,0,19,80x52,111,0[80x25,111,0,20,80x26,111,26,21]}'
-      # layout: '931b,286x55,0,0{80x55,0,0[80x27,0,0,10,80x27,0,28,11],124x55,81,0,2,80x55,206,0[80x27,206,0,6,80x27,206,28,12]}'
+      layout: 'ca9f,186x55,0,0{104x55,0,0,2,81x55,105,0[81x27,105,0,5,81x27,105,28,6]}'
       panes:
         - nvim:
             - cd /Volumes/sbrewer/scripts.new/bash/
@@ -65,11 +23,6 @@ windows:
         - cli_2:
             - clear
   - filepro:
-      # layout: '3204,271x66,0,0[271x31,0,0{90x31,0,0,3,90x31,91,0,4,89x31,182,0,5},271x34,0,32{90x34,0,32,6,90x34,91,32,8,89x34,182,32,7}]'
-      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
-      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
-      # synchronize: after
-      # layout: tiled
       layout: '355c,170x53,0,0[170x26,0,0{84x26,0,0,3,85x26,85,0,5},170x26,0,27{84x26,0,27,7,85x26,85,27,8}]'
       panes:
         - fp1:

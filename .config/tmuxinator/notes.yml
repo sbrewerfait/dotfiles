@@ -1,0 +1,8 @@
+# /Users/sbrewer/.config/tmuxinator/notes.yml
+
+name: notes
+root: '/Users/sbrewer/vault/sbrewer-dev'
+windows:
+  - notes:
+      panes:
+        - nvim

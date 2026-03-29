@@ -21,7 +21,7 @@ cursor_trail_start_threshold 0
 #: Appearance
 
 # BEGIN_KITTY_THEME
-# Adventure Time
+# ANSI 1987
 include current-theme.conf
 # END_KITTY_THEME
 

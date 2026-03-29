@@ -1,0 +1,9 @@
+# /Users/sbrewer/.config/tmuxinator/tunes.yml
+
+name: tunes
+root: ~/
+
+windows:
+  - spotify:
+      panes:
+        - spotify

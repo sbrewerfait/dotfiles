@@ -1,6 +1,0 @@
-name="cutesaver"
-tagline="infinite loop of cuteness"
-description="Prepare for an onslaught of adorable ASCII art. This screensaver cycles through a collection of cute and charming images, bringing a little bit of joy and whimsy to your terminal. A huge shoutout to the original artists!"
-authors="kestraI, attogram"
-license="MIT"
-settings=""

@@ -1,15 +1,11 @@
-.isolated-storage/
 containers/
-# filezilla/
-gh/
-raycast/
 fpsessions/
-# github-copilot/
-# raycast/
-# ghostty/
-zed/
+.isolated-storage/
 iterm2/
+raycast/
+.config/scripts/
 tmux/.config/tmux/plugins/
+zed/
 zsh/
 
 **/.DS_Store

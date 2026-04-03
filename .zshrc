@@ -14,6 +14,7 @@ alias ss="~/bin/bash-screensavers/screensaver.sh"
 # Neovim Configuration Aliases
 alias brewvim="NVIM_APPNAME='brewvim'"
 alias nvchad="NVIM_APPNAME='nvchad'"
+alias nv12="NVIM_APPNAME=''"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
